@@ -1,0 +1,97 @@
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background-color: white;
+    width: 500px; /* Adjust width as needed */
+    height: 400px; /* Increase the height of the popup */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .popup-header h2 {
+    margin: 0;
+  }
+  
+  .close-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .popup-body {
+    position: relative;
+  }
+  
+  .tabs {
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tabs button.active {
+    background-color: #1890ff;
+    color: white;
+  }
+  
+  .form {
+    position: relative;
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  .input-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-container input {
+    width: calc(100% - 20px); /* Adjust input width */
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+  
+  .next-btn {
+    position: absolute;
+    bottom: -30px;
+    right: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1890ff;
+    color: rgba(249, 251, 253, 0.87);
+  }
+  
+  .buttons button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  

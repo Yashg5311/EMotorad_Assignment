@@ -30,7 +30,7 @@ const PieChart = () => {
             },
             total: {
               show: true,
-              label: 'Total',
+              label: 'Total %',
               color: '#666',
               fontSize: '18px',
               formatter: function (w) {

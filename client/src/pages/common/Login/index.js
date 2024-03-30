@@ -1,13 +1,48 @@
 import React from 'react';
 import { Form, message, Button } from 'antd';
 import { Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from '../Home'
+import ProtectedRoute from '../../../components/ProtectedRoute';
 import { loginUser } from '../../../apicalls/users';
+
 import { HideLoading, ShowLoading } from '../../../redux/loaderSlice';
 import { useDispatch } from 'react-redux';
 import { GithubOutlined, TwitterOutlined, LinkedinOutlined, DiscordOutlined, GoogleOutlined, AppleOutlined } from '@ant-design/icons'; // Import icons from Ant Design
 import './login.css'; // Import your CSS file
 
+// import React from "react";
+
+import {auth} from "../../../firebase-config";
+import { provider } from "../../../firebase-config";
+import { getAuth, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { useState,useEffect } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth"
+
+
 const Login = () => {
+    useEffect(()=>{
+        return onAuthStateChanged(auth,(data)=>{
+          if(data == null){
+              console.log("aleert")
+          }
+          else {
+              // windows.alert("logged in as student")
+              alert("sucess login ");
+
+              window.location.href = "/";
+              
+           }
+  
+           
+  
+        })});
+
+        const signInWithGoogle = () => {
+            signInWithPopup(auth,provider)
+             
+        };
+
     const dispatch = useDispatch();
 
     const onFinish = async (values) => {
@@ -52,7 +87,7 @@ const Login = () => {
                         <p className="sign-in-info">Sign in to your account</p>
                         <Form layout='vertical' className='mt-2' onFinish={onFinish}>
                             <div className="external-login-buttons">
-                                <Button className="external-login-btn" icon={<GoogleOutlined  style={{ color: '#DB4437' }}/> } type="primary">Sign in with Google</Button>
+                                <Button className="external-login-btn" icon={<GoogleOutlined  style={{ color: '#DB4437' }}/>  } onClick={signInWithGoogle} type="primary">Sign in with Google</Button>
                                 <Button className="external-login-btn" icon={<AppleOutlined />} type="primary">Sign in with Apple</Button>
                             </div>
                             <Form.Item name='email' label={<label style={{ color: "black" }}>Email</label>}>

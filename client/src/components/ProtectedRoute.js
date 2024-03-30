@@ -13,10 +13,23 @@ import { RiMoneyDollarCircleLine, RiExchangeDollarLine, RiThumbUpLine } from 're
 import ChartComponent from "./ChartComponent.jsx";
 import LeftCard from "./LeftCard.jsx";
 import RightCard from "./RightCard.jsx";
-
+import { getAuth, signOut } from "firebase/auth";
 
 
 function Protectedroute({ children }) {
+  const auth = getAuth();
+  const helpp = () =>{
+    
+    signOut(auth).then(() => {
+      alert("logged out successfully");
+      window.location.href = "/login";
+      // Sign-out successful.
+      
+    }).catch((error) => {
+      console.log("some problem loggin out.")
+      // An error happened.
+    });
+  }
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.users);
   const [menu, setMenu] = useState([]);
@@ -110,7 +123,7 @@ function Protectedroute({ children }) {
               }}
             />
             <RiNotification2Line style={{ fontSize: '20px', color: '#1890ff', marginRight: '10px' }} /> {/* Adjusted margin */}
-            <Avatar src={user?.photoURL} /> {/* Removed margin and adjusted placement */}
+            <Avatar src={user?.photoURL} onClick={helpp} /> {/* Removed margin and adjusted placement */}
           </div>
 
           <div className="cards-container">

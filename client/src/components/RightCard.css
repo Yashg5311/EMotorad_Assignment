@@ -5,7 +5,7 @@
     justify-content: center;
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
+     /* Add border */
   }
   
   .icon-container2 {
@@ -16,15 +16,15 @@
   }
   
   .icon2 {
-    font-size: 60px; /* Adjust the icon size */
+    font-size: 60px;
     color: #555;
-    border-radius: 50%; /* Make the icon rounded */
-    width: 100px; /* Set a fixed width */
-    height: 100px; /* Set a fixed height */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ccc; /* Grey background color */
+    background-color: transparent; /* Remove background color */
   }
   
   .text2 {
