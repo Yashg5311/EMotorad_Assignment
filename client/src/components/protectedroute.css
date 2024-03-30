@@ -68,3 +68,14 @@
     margin-left: 20px; /* Add margin to the left */
   }
   
+
+  .lastcomponent {
+    display: flex;
+  }
+  
+  .left-card,
+  .right-card {
+    flex: 1;
+    margin: 10px;
+  }
+  

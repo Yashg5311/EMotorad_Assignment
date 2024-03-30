@@ -11,6 +11,8 @@ import { RiNotification2Line, RiSearchLine } from "react-icons/ri";
 import Card from "./Card.jsx";
 import { RiMoneyDollarCircleLine, RiExchangeDollarLine, RiThumbUpLine } from 'react-icons/ri';
 import ChartComponent from "./ChartComponent.jsx";
+import LeftCard from "./LeftCard.jsx";
+import RightCard from "./RightCard.jsx";
 
 
 
@@ -78,7 +80,7 @@ function Protectedroute({ children }) {
   return (
     <div className="layout">
       <Row justify="space-between" align="top" className="w-full h-full h-100">
-        <div className="sidebar">
+        <div className="sidebar" style={{ height: '180vh' }}>
           <div className="menu">
             <h1 style={{ color: 'white', marginBottom: '20px' }}>Boards.</h1>
             {menu.map((item, index) => (
@@ -143,8 +145,15 @@ function Protectedroute({ children }) {
             <ChartComponent />
           </div>
 
-          
 
+          <div className="lastcomponent">
+      <div className="left-card">
+        <LeftCard />
+      </div>
+      <div className="right-card w-50%">
+        <RightCard />
+    </div>
+    </div>
 
         </div>
 
