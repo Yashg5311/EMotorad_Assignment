@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Chart from "react-apexcharts";
-import './Chart.css'
-import ChartComponent2 from "./chartnew";
+import './Chart.css';
 
-const ChartComponent = () => {
+const ChartComponent2 = () => {
+  const [chartHeight, setChartHeight] = useState(0);
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    const parentHeight = chartRef.current.clientHeight;
+    setChartHeight(parentHeight);
+  }, []);
+
   const options = {
     chart: {
       id: "basic-bar",
-      height: 100
+      toolbar: {
+        show: false // Hide the chart toolbar
+      }
     },
     xaxis: {
       categories: ["Week 1", "Week 2", "Week 3", "Week 4"],
@@ -21,20 +30,20 @@ const ChartComponent = () => {
 
   const series = [
     {
-        name: "User",
-        data: [500, 350, 200, 400],
-        color: "#FF4560",
-      },
+      name: "User",
+      data: [500, 350, 200, 400],
+      color: "#FF4560",
+    },
     {
       name: "Guest",
       data: [400, 450, 300, 350],
-       color:"#4CAF50",
+      color: "#4CAF50",
     },
   ];
 
   return (
-    <div className="card chart-card">
-      <div className="card-header">
+    <div className="card chart-card" ref={chartRef} style={{ height: "300px" }}>
+      {/* <div className="card-header">
         <div className="header-left">
           <h3>Activities</h3>
           <p>May-June 2021</p>
@@ -51,13 +60,12 @@ const ChartComponent = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="card-body">
-       {/* {<Chart options={options} series={series} type="bar" />} */}
-        <ChartComponent2/>
+      </div> */}
+      <div className="card-body" style={{ height: chartHeight }}>
+        <Chart options={options} series={series} type="bar" height={chartHeight} />
       </div>
     </div>
   );
 };
 
-export default ChartComponent;
+export default ChartComponent2;

@@ -13,6 +13,7 @@ import { RiMoneyDollarCircleLine, RiExchangeDollarLine, RiThumbUpLine } from 're
 import ChartComponent from "./ChartComponent.jsx";
 
 
+
 function Protectedroute({ children }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.users);
@@ -137,9 +138,14 @@ function Protectedroute({ children }) {
             />
 
           </div>
-          <div className="Bargraph" style={{ width: '1000px' }}>
-          <ChartComponent />
+
+          <div className="Bargraph" style={{ width: '1000px', height: "50%" }}>
+            <ChartComponent />
           </div>
+
+          
+
+
         </div>
 
       </Row>

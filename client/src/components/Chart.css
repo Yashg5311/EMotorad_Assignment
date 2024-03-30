@@ -8,6 +8,7 @@
   
   .card-body {
     flex-grow: 1;
+    height: 300px;
   }
   
   .card-header {
