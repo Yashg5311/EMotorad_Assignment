@@ -12,7 +12,9 @@ const Register = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();;
     const onFinish = async (values) => {
+        console.log("hi");
         try {
+            
             dispatch(ShowLoading());
             const response = await registerUser(values);
             dispatch(HideLoading());
@@ -68,9 +70,9 @@ const Register = () => {
                             <Input.Password />
                         </Form.Item>
                         <div className='flex flex-col gap-2'>
-                            <Button type='submit' className='primary-outlined-btn mt-2 w-100'>
-                                Register
-                            </Button>
+                                <button type='submit' className='primary-outlined-btn mt-2 w-100'>
+                                    Register
+                                </button>
                             <Link to='/login' className='col'>
                                 Already a member? Login
                             </Link>
