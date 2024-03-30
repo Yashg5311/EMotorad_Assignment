@@ -10,7 +10,7 @@ import { BiBookmarks } from "react-icons/bi";
 import { RiNotification2Line, RiSearchLine } from "react-icons/ri";
 import Card from "./Card.jsx";
 import { RiMoneyDollarCircleLine, RiExchangeDollarLine, RiThumbUpLine } from 'react-icons/ri';
-import { Chart } from "chart.js";
+import ChartComponent from "./ChartComponent.jsx";
 
 
 function Protectedroute({ children }) {
@@ -93,7 +93,7 @@ function Protectedroute({ children }) {
           </div> */}
         </div>
 
-        <div className="right-half">
+        <div className="right-half p-3 bg-red">
           <div className="header">
             <h1 style={{ color: 'black', marginRight: 'auto', marginLeft: '10px' }}>Dashboard</h1>
             <Input placeholder="Search.."
@@ -137,10 +137,8 @@ function Protectedroute({ children }) {
             />
 
           </div>
-          <div className="Bargraph">
-            <canvas id="bar-chart">
-              <Chart/>
-            </canvas>
+          <div className="Bargraph" style={{ width: '1000px' }}>
+          <ChartComponent />
           </div>
         </div>
 
