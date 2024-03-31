@@ -34,10 +34,17 @@ const Login = () => {
         });
     }, []);
 
-        const signInWithGoogle = () => {
-            signInWithPopup(auth,provider);
-             
-        };
+    const signInWithGoogle = async () => {
+        try {
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+            // Redirect to home page after successful login
+            window.location.href = "/";
+        } catch (error) {
+            console.error(error);
+            message.error('Failed to sign in with Google');
+        }
+    };
 
     const dispatch = useDispatch();
 
