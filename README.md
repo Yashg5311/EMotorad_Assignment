@@ -10,6 +10,9 @@
   * [Configuration and Setup](#configuration-and-setup)
   
 
+## Live Link:
+
+
 
 ## Demo link
 Please find the attached Video:
@@ -60,6 +63,9 @@ A pOp up For adding new Profiles
 - ApexChart library was used to implement Chartjs and Donut Chart.
 - 2 Models were craeted at Bacckend..one for users and one for adding Profiles.
 - Delpoyed on Render, both Backend and Frontend.
+
+## Problems Faced
+Faced In Firebase Authentication and Deploying. Also in Making Chart.
 
 
 ## Technologies used
@@ -122,3 +128,6 @@ In the second terminal (*in the project root directory (server)).
 ```
 $ npm install (to install server-side dependencies)
 & node server.js (to start the server)
+
+
+
