@@ -11,7 +11,8 @@
   
 
 ## Live Link:
-
+Please find the Live Link
+https://emotoradassignment.onrender.com/login
 
 
 ## Demo link
@@ -26,7 +27,7 @@ Login Page:
 ![Screenshot (523)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/cedfe99d-3f67-44ce-b40f-7c5f2f97c6d5)
 
 This is the login page as described..which also consists of Sign In with Google and Email address and Password for Login.
-
+(If Firebase not working, Kindly please create a profile and then register)
 
 Register page:
 ![Screenshot (522)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/9e33bed1-1192-416b-87db-bdb74ed01bc6)
