@@ -27,21 +27,21 @@ https://drive.google.com/file/d/1JQkmo7NnDj6Ek2uyAwjGkUIa-Fv8fXqY/view?usp=shari
 ## Introduction
 This is a MERN Stack project based on Dash Board and Sign In with key features such as Charts, Cards and Adding New Profiles to Database.
 Login Page:
-![Screenshot (523)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/cedfe99d-3f67-44ce-b40f-7c5f2f97c6d5)
+![Screenshot (519)](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/f518b60f-8506-4e3b-a4d6-c6703433940c)
 
 This is the login page as described..which also consists of Sign In with Google and Email address and Password for Login.
 (If Firebase not working, Kindly please create a profile and then register)
 
 Register page:
-![Screenshot (522)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/9e33bed1-1192-416b-87db-bdb74ed01bc6)
+![Screenshot (522)](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/4cd7228e-a468-41ca-bbf7-7a15335ee656)
 
 This is the Register page , Name, email and Password...You can craete a account and then Log In
 
 
 Home Page:
-![Screenshot (524)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/36d1ba25-73a7-434f-86f6-532cca109345)
+![Screenshot (525)](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/78c7b285-2aac-48fc-b1fb-c39029921381)
 
-![Screenshot (526)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/eb390f38-b6e3-4f64-8f6b-a1cf271b4962)
+![Screenshot (527)](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/0c3d1baf-569a-4618-8859-0382c5e30cba)
 
 Cards Component:
 ![image](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/05cb8d86-b5a8-4fde-8807-32543622c601)
@@ -52,9 +52,9 @@ Charts Component:
 
 
 Pop Up Box:
-![Screenshot (528)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/a8e0f8a1-a7ab-4704-9a85-b9f6ef2f1952)
+![Screenshot (529)](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/ab732b58-78a6-4889-b9c8-9cac2ef2b06e)
+![Screenshot (531)](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/4dab68f3-4419-46b0-9551-98cd472bc873)
 
-![Screenshot (530)](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/a9d031ba-76a7-4d9d-9283-fbdb198c6b02)
 
 A pOp up For adding new Profiles
 
