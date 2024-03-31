@@ -27,10 +27,21 @@ const Login = () => {
     
 
     const handleSignInWithGoogle = async () => {
-        signInWithPopup(auth, provider).then((res) =>{
+        try {
+            const result = await signInWithPopup(auth, provider);
             navigate("/");
-            console.log(res)
-       })
+            console.log(result);
+        } catch (error) {
+            // Handle the error
+            console.error(error);
+            if (error.code === 'auth/cancelled-popup-request') {
+                // Inform the user that the sign-in process was cancelled
+                alert('Sign-in process was cancelled.');
+            } else {
+                // Inform the user about other errors
+                alert('Failed to sign in with Google. Please try again.');
+            }
+        }
     };
 
 
