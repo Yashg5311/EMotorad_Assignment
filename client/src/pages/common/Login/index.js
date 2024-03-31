@@ -21,18 +21,20 @@ import { onAuthStateChanged, signOut } from "firebase/auth"
 
 
 const Login = () => {
+    const dispatch = useDispatch();
     useEffect(() => {
-        return onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // User is signed in
-                alert("Successfully logged in");
-                window.location.href = "/"; // Redirect to home page after successful login
-            } else {
-                // No user is signed in
-                console.log("User is not logged in");
-            }
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+          if (user) {
+            // User is signed in
+            alert("Successfully logged in");
+            window.location.href = "/"; // Redirect to home page after successful login
+          } else {
+            // No user is signed in
+            console.log("User is not logged in");
+          }
         });
-    }, []);
+        return () => unsubscribe(); // Cleanup function to unsubscribe from the listener
+      }, []);
 
     const signInWithGoogle = async () => {
         try {
@@ -46,7 +48,6 @@ const Login = () => {
         }
     };
 
-    const dispatch = useDispatch();
 
     const onFinish = async (values) => {
         try {
