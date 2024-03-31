@@ -21,25 +21,21 @@ import { onAuthStateChanged, signOut } from "firebase/auth"
 
 
 const Login = () => {
-    useEffect(()=>{
-        return onAuthStateChanged(auth,(data)=>{
-          if(data == null){
-              console.log("aleert")
-          }
-          else {
-              // windows.alert("logged in as student")
-              alert("sucess login ");
-
-              window.location.href = "/";
-              
-           }
-  
-           
-  
-        })});
+    useEffect(() => {
+        return onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in
+                alert("Successfully logged in");
+                window.location.href = "/"; // Redirect to home page after successful login
+            } else {
+                // No user is signed in
+                console.log("User is not logged in");
+            }
+        });
+    }, []);
 
         const signInWithGoogle = () => {
-            signInWithPopup(auth,provider)
+            signInWithPopup(auth,provider);
              
         };
 
