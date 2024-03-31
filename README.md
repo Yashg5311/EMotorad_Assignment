@@ -44,11 +44,10 @@ Home Page:
 ![Screenshot (527)](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/0c3d1baf-569a-4618-8859-0382c5e30cba)
 
 Cards Component:
-![image](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/05cb8d86-b5a8-4fde-8807-32543622c601)
-
+![image](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/12edd43e-991b-4525-841a-45cac52f4de7)
 
 Charts Component:
-![image](https://github.com/Yashg5311/EMotoradAssignment/assets/91370994/3502ef22-8c6f-4e14-9a62-d2f21af222a5)
+![image](https://github.com/Yashg5311/EMotorad_Assignment/assets/91370994/78c6c570-5e42-4512-a650-8fb45d3f8193)
 
 
 Pop Up Box:
