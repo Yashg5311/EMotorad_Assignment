@@ -1,29 +1,64 @@
 import React, { useState } from 'react';
 import './Popup.css'; // Import Popup.css for styling
+import { addProfileReport } from '../apicalls/profile';
 
 const Popup = ({ onClose }) => {
   const [tab, setTab] = useState('basic');
-  const [name,setName] = useState('');
-  const [email,setEmail] = useState('');
-  const [phone,setPhone] = useState('');
-  const [insta,setInsta] = useState('');
-  const [youtube,setYoutube] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [insta, setInsta] = useState('');
+  const [youtube, setYoutube] = useState('');
 
-  const handleClose = () => {
-    onClose();
-    console.log(name,email,phone,insta,youtube);
+  const handleClose = async () => {
+    try {
+      // Prepare payload
+      const payload = {
+        name,
+        email,
+        phone,
+        instaUrl: insta,
+        youtubeUrl: youtube
+      };
+
+      // Call API to add profile report
+      const response = await addProfileReport(payload);
+
+      // Check if API call was successful
+      if (response.success) {
+        console.log('Profile report added successfully:', response);
+        // Close the popup
+        onClose();
+      } else {
+        console.error('Error adding profile report:', response.message);
+        // Handle error (e.g., show error message to the user)
+      }
+    } catch (error) {
+      console.error('Error adding profile report:', error);
+      // Handle error (e.g., show error message to the user)
+    }
   };
 
   const handleTabChange = (tabName) => {
     setTab(tabName);
   };
+  
 
+  const handleClosePopup = async () => {
+    try {
+      // Close the popup
+      onClose();
+    } catch (error) {
+      console.error('Error closing popup:', error);
+      // Handle error (if any)
+    }
+  };
   return (
     <div className="popup-background">
       <div className="popup">
         <div className="popup-header">
           <h2>Add Profile</h2>
-          <button className="close-btn" onClick={handleClose}>×</button>
+          <button className="close-btn" onClick={handleClosePopup}>×</button>
         </div>
         <div className="popup-body">
           <div className="tabs">
@@ -50,7 +85,7 @@ const Popup = ({ onClose }) => {
             )}
             {tab === 'contact' && (
               <div>
-                 <label>Enter Instagram</label>
+                <label>Enter Instagram</label>
                 <input type="text" value={insta} onChange={(e) => setInsta(e.target.value)} placeholder="Instagram Link (optional)" />
                 <label>Enter Youtube Link</label>
                 <input type="text" value={youtube} onChange={(e) => setYoutube(e.target.value)} placeholder="Youtube Link (optional)" />

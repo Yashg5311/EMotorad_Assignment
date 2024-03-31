@@ -4,7 +4,7 @@ import './LeftCard.css'; // Import the CSS file for styling
 
 const LeftCard = () => {
   return (
-    <div className="left-card">
+    <div className="left-card" style={{height:'300px'}}>
       <div className="top-products">
         <h3>Top Products</h3>
         <p className="month">May-June 2021</p>

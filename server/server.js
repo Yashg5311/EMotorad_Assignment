@@ -6,13 +6,13 @@ app.use(express.json());
 
 const dbConfig=require('./config/dbConfig');
 const usersRoute =require("./routes/usersRoute");
-const examsRoute =require("./routes/examsRoute");
-const resportsRoute = require("./routes/reportsRoute");
+
+const profileRoute=require("./routes/profileRoute");
 
 
 app.use("/api/users", usersRoute);
-app.use("/api/exams", examsRoute);
-app.use("/api/reports", resportsRoute);
+
+app.use('/api/profiles', profileRoute);
 
 
 

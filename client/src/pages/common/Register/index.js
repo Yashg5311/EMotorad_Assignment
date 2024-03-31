@@ -64,7 +64,7 @@ const Register = () => {
                             <Input type='text' />
                         </Form.Item>
                         <Form.Item name='email' label='Email'>
-                            <Input type='text' />
+                            <Input type='text'/>
                         </Form.Item>
                         <Form.Item name='password' label='Password'>
                             <Input.Password />

@@ -64,6 +64,17 @@ function Protectedroute({ children }) {
     },
   ];
 
+  const additionalMenu = [
+    {
+      title: "Help",
+      onClick: () => navigate("/help"),
+    },
+    {
+      title: "Contact Us",
+      onClick: () => navigate("/contact"),
+    },
+  ];
+
   const getUserData = async () => {
     try {
       dispatch(ShowLoading());
@@ -93,36 +104,48 @@ function Protectedroute({ children }) {
   return (
     <div className="layout">
       <Row justify="space-between" align="top" className="w-full h-full h-100">
-        <div className="sidebar" style={{ height: '180vh' }}>
+        <div className="sidebar" style={{ height: '170vh' }}>
           <div className="menu">
-            <h1 style={{ color: 'white', marginBottom: '20px' }}>Boards.</h1>
+            <h1 style={{ color: 'white', marginBottom: '20px' }}>Board.</h1>
             {menu.map((item, index) => (
               <div key={index} className="menu-item" onClick={item.onClick}>
                 {item.icon}
                 <span style={{ marginLeft: '10px' }}>{item.title}</span>
               </div>
             ))}
+            {additionalMenu.map((item, index) => (
+          <div key={index} className="menu-item2" onClick={item.onClick}>
+            <span style={{ marginTop: '20px' }}>{item.title}</span>
+          </div>
+        ))}
+
           </div>
           {/* <div className="footer">
             <div style={{ marginRight: '50px' }}>Help</div>
             <div>Contact Us</div>
           </div> */}
+          
         </div>
 
         <div className="right-half p-3 bg-red">
           <div className="header">
-            <h1 style={{ color: 'black', marginRight: 'auto', marginLeft: '10px' }}>Dashboard</h1>
-            <Input placeholder="Search.."
-              suffix={<RiSearchLine style={{ color: '#1890ff', fontSize: '16px' }} />} // Changed prefix to suffix
-              style={{
-                width: '200px',
-                height: '30px',
-                borderRadius: '15px',
-                marginRight: '10px',
-                paddingRight: '10px', // Adjusted paddingRight to accommodate icon
-              }}
-            />
-            <RiNotification2Line style={{ fontSize: '20px', color: '#1890ff', marginRight: '10px' }} /> {/* Adjusted margin */}
+            <h1 style={{ color: 'black', marginRight: 'auto', marginLeft: '20px' }}>Dashboard</h1>
+            <Input
+  placeholder="Search.."
+  suffix={<RiSearchLine style={{ color: '#1890ff', fontSize: '10px', alignContent: 'center' }} />}
+  style={{
+    width: '220px',
+    height: '40px',
+    borderRadius: '15px',
+    padding: '0 30px',
+    marginRight: '10px',
+    verticalAlign: 'middle',
+    lineHeight: '30px',
+    overflow: 'hidden', 
+   // Ensure that the text stays inside the input box
+  }}
+/>
+            <RiNotification2Line style={{ fontSize: '20px', color: 'rgba(10, 10, 10, 0.986)', marginRight: '10px' }} /> {/* Adjusted margin */}
             <Avatar src={user?.photoURL} onClick={helpp} /> {/* Removed margin and adjusted placement */}
           </div>
 
@@ -159,8 +182,8 @@ function Protectedroute({ children }) {
           </div>
 
 
-          <div className="lastcomponent">
-      <div className="left-card">
+          <div className="lastcomponent" style={{ marginTop: '20px' }}>
+      <div className="left-card" style={{ height:'350px'}}>
         <LeftCard />
       </div>
       <div className="right-card w-50%">

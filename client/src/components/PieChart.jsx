@@ -11,7 +11,8 @@ const PieChart = () => {
     plotOptions: {
       pie: {
         donut: {
-          size: '65%', // Adjust the size of the donut hole
+          size: '65%',
+ // Adjust the size of the donut hole
           labels: {
             show: true,
             name: {
@@ -53,6 +54,7 @@ const PieChart = () => {
       series={series}
       type="donut"
       width="100%"
+      height={180}
     />
   );
 };

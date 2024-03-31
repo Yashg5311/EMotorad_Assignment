@@ -47,6 +47,7 @@ const Login = () => {
 
     const onFinish = async (values) => {
         try {
+            console.log("hi")
             dispatch(ShowLoading());
             const response = await loginUser(values);
             dispatch(HideLoading());
@@ -90,12 +91,15 @@ const Login = () => {
                                 <Button className="external-login-btn" icon={<GoogleOutlined  style={{ color: '#DB4437' }}/>  } onClick={signInWithGoogle} type="primary">Sign in with Google</Button>
                                 <Button className="external-login-btn" icon={<AppleOutlined />} type="primary">Sign in with Apple</Button>
                             </div>
-                            <Form.Item name='email' label={<label style={{ color: "black" }}>Email</label>}>
-                                <input type='text' />
-                            </Form.Item>
-                            <Form.Item label={<label style={{ color: "black" }}>Password</label>} name='password'>
-                                <input type='password' />
-                            </Form.Item>
+                            <Form.Item name='email' label={<label style={{ color: "black" }}>Email Address</label>}>
+    <input className='input-field' type='text' />
+</Form.Item>
+<Form.Item label={<label style={{ color: "black" }}>Password</label>} name='password'>
+    <input className='input-field' type='password' />
+</Form.Item>
+<p className='forgot-password-text'>
+    Forgot Password?
+</p>
                             <div className='flex flex-col gap-2'>
                                 <button type='submit' className='primary-outlined-btn mt-2 w-100'>
                                     Sign In

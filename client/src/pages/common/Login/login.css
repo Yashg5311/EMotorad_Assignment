@@ -7,13 +7,14 @@
 
 .left-half {
     flex: 1;
-    background-color: #4f6bebe8; /* Blue background */
+    background-color: #4f6cebc7; /* Blue background */
     color: #d9e6fa;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%); /* Apply clip-path for tilted effect */
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+ /* Apply clip-path for tilted effect */
 }
 
 
@@ -73,14 +74,16 @@
 .login-label {
     font-size: 30px;
     font-weight: bolder; /* Adjust font-weight */
-    margin-bottom: 80px; /* Increase margin-bottom for more spacing */
-    color: black; /* Make the text black */
+    margin-bottom: 100px; /* Increase margin-bottom for more spacing */
+    color: black;
+    margin-top: 40px; /* Make the text black */
 }
 
 .sign-in-info {
     font-size: 14px;
-    margin-bottom: 5px; /* Increase margin-bottom for more spacing */
+    margin-bottom: 100px; /* Increase margin-bottom for more spacing */
     color: #777; /* Lighter color */
+    margin-top: 10px;
 }
 
 .external-login-buttons {
@@ -93,7 +96,7 @@
     width: calc(50% - 5px); /* Adjust width */
     border-radius: 10px; /* Rounded rectangular shape */
     background-color: white; /* White background */
-    color: black; /* Black text color */
+    color: #f5ebebe0; /* Black text color */
 }
 
 .external-login-btn:hover {
@@ -116,7 +119,7 @@ input[type='password'] {
     padding: 10px;
     border: 1px solid #4f6bebe8;
     border-radius: 5px;
-    background-color: #4f6bebe8;
+    background-color: #4f6cebc7;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -143,15 +146,21 @@ input[type='password'] {
 
 
 .input-field {
-    width: 50%;
-    padding: 2px;
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 16px;
-    background-color: #f0f2f5; /* Grey background color */
+    background-color: #f0f2f5e8; /* Light grey background color */
 }
 
 .input-field:focus {
     outline: none; /* Remove focus outline */
+    background-color: #d0d7de; /* Change background color on focus */
+}
+
+.forgot-password-text {
+    margin-top: -5px; /* Add margin top */
+    color: #007bff; /* Blue color */
 }

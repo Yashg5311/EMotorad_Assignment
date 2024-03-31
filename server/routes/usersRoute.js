@@ -7,7 +7,7 @@ const authMiddleware = require("../middlewares/authMiddleware");
 // user registration
 router.post("/register", async (req, res) => {
     try {
-      // check if user already exists
+      // check if user already exists)
       const userExists = await User.findOne({ email: req.body.email });
       if (userExists) {
         return res
@@ -27,6 +27,7 @@ router.post("/register", async (req, res) => {
       message: "User created successfully",
       success: true,
     });
+    console.log("success");
   } catch (error) {
     res.status(500).send({
       message: error.message,

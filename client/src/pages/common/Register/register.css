@@ -137,3 +137,18 @@ input[type='password'] {
 .col:hover {
     text-decoration: underline;
 }
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #f0f2f5e8; /* Light grey background color */
+}
+
+.input-field:focus {
+    outline: none; /* Remove focus outline */
+    background-color: #d0d7de; /* Change background color on focus */
+}

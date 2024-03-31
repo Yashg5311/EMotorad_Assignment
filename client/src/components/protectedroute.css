@@ -1,7 +1,7 @@
 .sidebar {
     background-color: #4f6bebe8;
     padding: 20px;
-    height: 100vh; /* Set sidebar height to full viewport height */
+    height: 80vh; /* Set sidebar height to full viewport height */
     width: 20%; /* Set sidebar width to approximately 30% of the page */
     display: flex;
     flex-direction: column;
@@ -26,7 +26,8 @@
     padding: 10px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Add spacing between menu items */
+    margin-bottom: 10px;
+    margin-top: 20px; /* Add spacing between menu items */
 }
 
 .menu-item span {
@@ -80,3 +81,20 @@
     border-radius: 10px;
   }
  
+
+  .additional-menu {
+    margin-top: auto; /* Pushes the additional menu items to the bottom */
+  }
+
+
+  .menu-item2 {
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;  
+}
+
+.Bargraph{
+  margin-top: 20px;
+}
