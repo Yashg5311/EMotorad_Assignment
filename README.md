@@ -15,6 +15,9 @@ Please find the Live Link
 https://emotoradassignment.onrender.com/login
 
 
+Please login from Register and Sign In if not logging from Google. There has been a technical glitch in Firebase Authentication.
+
+
 ## Demo link
 Please find the attached Video:
 https://drive.google.com/file/d/1JQkmo7NnDj6Ek2uyAwjGkUIa-Fv8fXqY/view?usp=sharing
