@@ -15,7 +15,8 @@ Please find the Live Link
 https://emotoradassignment.onrender.com/login
 
 
-Please login from Register and Sign In if not logging from Google. There has been a technical glitch in Firebase Authentication.
+Please login from Register and Sign In if not logging from Google. There has been a technical glitch in Firebase Authentication.(Cross Origin Policy Error).
+Also please Log out from the avatar from the top right of search and bell icon.
 
 
 ## Demo link
